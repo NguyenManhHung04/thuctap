@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án khu đô thị mới | Batdongsan.com.vn</title>
+    <title>Batdongsan.com.vn - Kênh thông tin số 1 về bất động sản</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <!-- Header -->
@@ -31,7 +31,7 @@
                         <a class="nav-link" href="#">Nhà đất cho thuê</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Dự án</a>
+                        <a class="nav-link active" href="khudothimoi.html">Dự án</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tin tức</a>
@@ -61,300 +61,701 @@
     </div>
 </header>
 
-    <!-- Hero Banner Slider -->
-    <section class="hero-banner position-relative">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/banner.jpg" class="d-block w-100" alt="Kita Capital Ciputra">
-                    <div class="carousel-caption text-start">
-                        <span class="badge bg-success mb-2">Đang mở bán</span>
-                        <h1 class="fw-bold">Kita Capital Ciputra</h1>
-                        <p>Ô đất BT5 - Khu đô thị Ciputra, phường Phú Thượng, Quận Tây Hồ, Hà Nội</p>
-                    </div>
-                </div>
-                <!-- Thêm các slide khác ở đây -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <div class="carousel-indicators custom-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
-            </div>
+    <!-- Mobile Menu Offcanvas -->
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </section>
-
-    <!-- Search Filters -->
-    <section class="search-filters py-3 bg-white">
-        <div class="container">
-            <div class="row g-2 align-items-center">
-                <div class="col-lg-3">
-                    <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0"><i class="fas fa-search"></i></span>
-                        <input type="text" class="form-control border-start-0" placeholder="Tìm kiếm dự án...">
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="dropdown w-100">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
-                            <span>Khu vực</span>
-                            <span class="float-end">Toàn quốc</span>
-                        </button>
-                        <ul class="dropdown-menu w-100">
-                            <li><a class="dropdown-item" href="#">Toàn quốc</a></li>
-                            <li><a class="dropdown-item" href="#">Hà Nội</a></li>
-                            <li><a class="dropdown-item" href="#">TP. Hồ Chí Minh</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="dropdown w-100">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
-                            <span>Loại hình</span>
-                            <span class="float-end">Tất cả</span>
-                        </button>
-                        <ul class="dropdown-menu w-100">
-                            <li><a class="dropdown-item" href="#">Tất cả</a></li>
-                            <li><a class="dropdown-item" href="#">Căn hộ</a></li>
-                            <li><a class="dropdown-item" href="#">Nhà phố</a></li>
-                            <li><a class="dropdown-item" href="#">Biệt thự</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="dropdown w-100">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
-                            <span>Mức giá</span>
-                            <span class="float-end">Tất cả</span>
-                        </button>
-                        <ul class="dropdown-menu w-100">
-                            <li><a class="dropdown-item" href="#">Tất cả</a></li>
-                            <li><a class="dropdown-item" href="#">Dưới 1 tỷ</a></li>
-                            <li><a class="dropdown-item" href="#">1 - 3 tỷ</a></li>
-                            <li><a class="dropdown-item" href="#">3 - 5 tỷ</a></li>
-                            <li><a class="dropdown-item" href="#">Trên 5 tỷ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="dropdown w-100">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
-                            <span>Trạng thái</span>
-                            <span class="float-end">Tất cả</span>
-                        </button>
-                        <ul class="dropdown-menu w-100">
-                            <li><a class="dropdown-item" href="#">Tất cả</a></li>
-                            <li><a class="dropdown-item" href="#">Đang mở bán</a></li>
-                            <li><a class="dropdown-item" href="#">Sắp mở bán</a></li>
-                            <li><a class="dropdown-item" href="#">Đã bàn giao</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-1">
-                    <button class="btn btn-outline-secondary w-100"><i class="fas fa-sync-alt"></i></button>
-                </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nhà đất bán</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nhà đất cho thuê</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dự án</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Wiki BĐS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Phân tích đánh giá</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Danh bạ</a>
+                </li>
+            </ul>
+            <div class="mt-3">
+                <a href="#" class="btn btn-outline-secondary w-100 mb-2">Tải ứng dụng</a>
+                <a href="#" class="btn btn-outline-secondary w-100 mb-2">Đăng nhập</a>
+                <a href="#" class="btn btn-outline-secondary w-100 mb-2">Đăng ký</a>
+                <a href="#" class="btn btn-danger w-100">Đăng tin</a>
             </div>
         </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <section class="breadcrumb-section py-2 bg-light">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">Dự án</a></li>
-                    <li class="breadcrumb-item active">Dự án BĐS Toàn Quốc</li>
-                </ol>
-            </nav>
-        </div>
-    </section>
+    </div>
 
     <!-- Main Content -->
-    <section class="main-content py-4">
-        <div class="container">
-            <div class="row">
-                <!-- Project Listings -->
-                <div class="col-lg-8">
-                    <h2 class="section-title mb-3">Dự án toàn quốc</h2>
-                    <p class="text-muted mb-4">Hiện đang có 5.680 dự án</p>
-
-                    <!-- Sort Options -->
-                    <div class="d-flex justify-content-end mb-4">
-                        <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                Mới nhất
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mới nhất</a></li>
-                                <li><a class="dropdown-item" href="#">Giá thấp đến cao</a></li>
-                                <li><a class="dropdown-item" href="#">Giá cao đến thấp</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project Item -->
-                    <div class="project-item card mb-4">
-                        <div class="row g-0">
-                            <div class="col-md-4 position-relative">
-                                <div id="project1Carousel" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/project1.jpg" class="img-fluid rounded-start" alt="Sora Bay Hạ Long">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/project1-2.jpg" class="img-fluid rounded-start" alt="Sora Bay Hạ Long">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#project1Carousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#project1Carousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Đang cập nhật</span>
-                                <div class="image-count position-absolute bottom-0 end-0 m-2 bg-dark bg-opacity-75 text-white px-2 py-1 rounded">
-                                    <i class="fas fa-image"></i> 7
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sora Bay Hạ Long</h5>
-                                    <p class="card-text text-muted">7,95 ha</p>
-                                    <p class="card-text">Đường Hoàng Quốc Việt, Phường Bãi Cháy, Thành phố Hạ Long, Quảng Ninh</p>
-                                    <p class="card-text">Sora Bay Hạ Long là dự án liền kề Shophouse mới nhất của Chủ đầu tư BIM Group thuộc khu đô thị Hạ Long Marina, nằm ngay mặt tiền đường...</p>
-                                    <div class="developer d-flex align-items-center mt-3">
-                                        <img src="images/bim-logo.png" alt="BIM Group" height="30" class="me-2">
-                                        <span>Tập đoàn BIM (BIM Group)</span>
+    <main>
+        <!-- Hero Section with Search -->
+        <section class="hero-section position-relative">
+            <div class="hero-background"></div>
+            <div class="container position-relative">
+                <div class="search-container bg-white rounded shadow mx-auto">
+                    <!-- Search Tabs -->
+                    <ul class="nav nav-tabs border-0" id="searchTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="buy-tab" data-bs-toggle="tab" data-bs-target="#buy-tab-pane" type="button" role="tab">Nhà đất bán</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="rent-tab" data-bs-toggle="tab" data-bs-target="#rent-tab-pane" type="button" role="tab">Nhà đất cho thuê</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="project-tab" data-bs-toggle="tab" data-bs-target="#project-tab-pane" type="button" role="tab">Dự án</button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Search Tab Content -->
+                    <div class="tab-content p-3" id="searchTabsContent">
+                        <div class="tab-pane fade show active" id="buy-tab-pane" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control border-start-0" placeholder="Trên toàn quốc">
+                                        <button class="btn btn-danger" type="button">Tìm kiếm</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Item 2 -->
-                    <div class="project-item card mb-4">
-                        <div class="row g-0">
-                            <div class="col-md-4 position-relative">
-                                <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/project2.jpg" class="img-fluid rounded-start" alt="Dự án 2">
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Loại nhà đất</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả nhà đất</a></li>
+                                            <li><a class="dropdown-item" href="#">Căn hộ chung cư</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà riêng</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà biệt thự, liền kề</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà mặt phố</a></li>
+                                            <li><a class="dropdown-item" href="#">Đất nền dự án</a></li>
+                                            <li><a class="dropdown-item" href="#">Đất</a></li>
+                                            <li><a class="dropdown-item" href="#">Trang trại, khu nghỉ dưỡng</a></li>
+                                            <li><a class="dropdown-item" href="#">Kho, nhà xưởng</a></li>
+                                            <li><a class="dropdown-item" href="#">Bất động sản khác</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Đang cập nhật</span>
-                                <div class="image-count position-absolute bottom-0 end-0 m-2 bg-dark bg-opacity-75 text-white px-2 py-1 rounded">
-                                    <i class="fas fa-image"></i> 5
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Mức giá</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả mức giá</a></li>
+                                            <li><a class="dropdown-item" href="#">Dưới 500 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">500 - 800 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">800 triệu - 1 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">1 - 2 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">2 - 3 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">3 - 5 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">5 - 7 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">7 - 10 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">10 - 20 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">20 - 30 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">30 - 40 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">40 - 60 tỷ</a></li>
+                                            <li><a class="dropdown-item" href="#">Trên 60 tỷ</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Havana Parkland Cao Thượng</h5>
-                                    <p class="card-text text-muted">5,2 ha</p>
-                                    <p class="card-text">Xã Cao Thượng, Huyện Tân Yên, Bắc Giang</p>
-                                    <p class="card-text">Havana Parkland Cao Thượng là dự án khu đô thị mới với quy mô 5,2 ha tại xã Cao Thượng, huyện Tân Yên, tỉnh Bắc Giang...</p>
-                                    <div class="developer d-flex align-items-center mt-3">
-                                        <img src="images/developer-logo.png" alt="Developer" height="30" class="me-2">
-                                        <span>Công ty Cổ phần Đầu tư Havana</span>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Diện tích</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả diện tích</a></li>
+                                            <li><a class="dropdown-item" href="#">Dưới 30 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">30 - 50 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">50 - 80 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">80 - 100 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">100 - 150 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">150 - 200 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">200 - 250 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">250 - 300 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">300 - 500 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">Trên 500 m²</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <nav aria-label="Page navigation" class="mt-4">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                    <i class="fas fa-chevron-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- Sidebar -->
-                <div class="col-lg-4">
-                    <!-- Project Ratings -->
-                    <div class="card mb-4">
-                        <div class="card-header d-flex justify-content-between align-items-center bg-white">
-                            <h5 class="mb-0">Đánh giá dự án</h5>
-                            <a href="#" class="text-danger">Xem tất cả <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="project-rating">
-                                <img src="images/rating-project.jpg" class="img-fluid w-100" alt="Đánh giá dự án">
-                                <div class="p-3">
-                                    <h6 class="mb-2">Thăm Lại Dự Án Legacy Prime Trước Khi Bàn Giao - Căn Hộ Liền Kề Aeon Mall Giá Tốt</h6>
-                                    <p class="text-muted mb-0">1 năm trước</p>
+                        <div class="tab-pane fade" id="rent-tab-pane" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control border-start-0" placeholder="Trên toàn quốc">
+                                        <button class="btn btn-danger" type="button">Tìm kiếm</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Loại nhà đất</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả nhà đất</a></li>
+                                            <li><a class="dropdown-item" href="#">Căn hộ chung cư</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà riêng</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà mặt phố</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà trọ, phòng trọ</a></li>
+                                            <li><a class="dropdown-item" href="#">Văn phòng</a></li>
+                                            <li><a class="dropdown-item" href="#">Cửa hàng, ki ốt</a></li>
+                                            <li><a class="dropdown-item" href="#">Kho, nhà xưởng, đất</a></li>
+                                            <li><a class="dropdown-item" href="#">Bất động sản khác</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Mức giá</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả mức giá</a></li>
+                                            <li><a class="dropdown-item" href="#">Dưới 1 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">1 - 3 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">3 - 5 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">5 - 10 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">10 - 15 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">15 - 20 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">20 - 30 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">30 - 40 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">40 - 60 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">60 - 100 triệu</a></li>
+                                            <li><a class="dropdown-item" href="#">Trên 100 triệu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Diện tích</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả diện tích</a></li>
+                                            <li><a class="dropdown-item" href="#">Dưới 30 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">30 - 50 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">50 - 80 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">80 - 100 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">100 - 150 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">150 - 200 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">200 - 250 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">250 - 300 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">300 - 500 m²</a></li>
+                                            <li><a class="dropdown-item" href="#">Trên 500 m²</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- News -->
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center bg-white">
-                            <h5 class="mb-0">Tin tức</h5>
-                            <a href="#" class="text-danger">Xem tất cả <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <div class="news-item d-flex mb-3">
-                                <img src="images/news1.jpg" alt="Tin tức" class="me-3" width="80" height="60">
-                                <div>
-                                    <h6 class="mb-1">Lãi Suất Vay Mua Nhà Ngân Hàng ACB Tháng 05/2025</h6>
-                                    <p class="text-muted mb-0">2 ngày trước</p>
+                        <div class="tab-pane fade" id="project-tab-pane" role="tabpanel" tabindex="0">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control border-start-0" placeholder="Trên toàn quốc">
+                                        <button class="btn btn-danger" type="button">Tìm kiếm</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news-item d-flex mb-3">
-                                <img src="images/news2.jpg" alt="Tin tức" class="me-3" width="80" height="60">
-                                <div>
-                                    <h6 class="mb-1">Cập Nhật Lãi Suất Vay Mua Nhà Ngân Hàng Vietcombank Tháng 05/2025</h6>
-                                    <p class="text-muted mb-0">3 ngày trước</p>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Loại hình</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả</a></li>
+                                            <li><a class="dropdown-item" href="#">Căn hộ chung cư</a></li>
+                                            <li><a class="dropdown-item" href="#">Cao ốc văn phòng</a></li>
+                                            <li><a class="dropdown-item" href="#">Trung tâm thương mại</a></li>
+                                            <li><a class="dropdown-item" href="#">Khu đô thị mới</a></li>
+                                            <li><a class="dropdown-item" href="#">Khu phức hợp</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà ở xã hội</a></li>
+                                            <li><a class="dropdown-item" href="#">Khu nghỉ dưỡng, Sinh thái</a></li>
+                                            <li><a class="dropdown-item" href="#">Khu công nghiệp</a></li>
+                                            <li><a class="dropdown-item" href="#">Biệt thự, liền kề</a></li>
+                                            <li><a class="dropdown-item" href="#">Shophouse</a></li>
+                                            <li><a class="dropdown-item" href="#">Nhà mặt phố</a></li>
+                                            <li><a class="dropdown-item" href="#">Dự án khác</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news-item d-flex">
-                                <img src="images/news3.jpg" alt="Tin tức" class="me-3" width="80" height="60">
-                                <div>
-                                    <h6 class="mb-1">Lãi Suất Vay Mua Nhà Ngân Hàng BIDV Tháng 05/2025</h6>
-                                    <p class="text-muted mb-0">4 ngày trước</p>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Tỉnh/Thành phố</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Toàn quốc</a></li>
+                                            <li><a class="dropdown-item" href="#">Hà Nội</a></li>
+                                            <li><a class="dropdown-item" href="#">TP. Hồ Chí Minh</a></li>
+                                            <li><a class="dropdown-item" href="#">Đà Nẵng</a></li>
+                                            <li><a class="dropdown-item" href="#">Hải Phòng</a></li>
+                                            <li><a class="dropdown-item" href="#">Bình Dương</a></li>
+                                            <li><a class="dropdown-item" href="#">Đồng Nai</a></li>
+                                            <li><a class="dropdown-item" href="#">Khánh Hòa</a></li>
+                                            <li><a class="dropdown-item" href="#">Long An</a></li>
+                                            <li><a class="dropdown-item" href="#">Quảng Nam</a></li>
+                                            <li><a class="dropdown-item" href="#">Bà Rịa Vũng Tàu</a></li>
+                                            <li><a class="dropdown-item" href="#">Đắk Lắk</a></li>
+                                            <li><a class="dropdown-item" href="#">Lâm Đồng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dropdown w-100">
+                                        <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" data-bs-toggle="dropdown">
+                                            <span>Quận/Huyện</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">Tất cả</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section py-4">
+            <div class="container">
+                <!-- News Tabs -->
+                <ul class="nav nav-tabs border-0 mb-3" id="newsTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="featured-tab" data-bs-toggle="tab" data-bs-target="#featured-tab-pane" type="button" role="tab">Tin nổi bật</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news-tab-pane" type="button" role="tab">Tin tức</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="hcm-tab" data-bs-toggle="tab" data-bs-target="#hcm-tab-pane" type="button" role="tab">BĐS TPHCM</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="hanoi-tab" data-bs-toggle="tab" data-bs-target="#hanoi-tab-pane" type="button" role="tab">BĐS Hà Nội</button>
+                    </li>
+                    <li class="ms-auto">
+                        <a href="#" class="text-danger text-decoration-none">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                    </li>
+                </ul>
+                
+                <!-- News Tab Content -->
+                <div class="tab-content" id="newsTabsContent">
+                    <div class="tab-pane fade show active" id="featured-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="main-news">
+                                    <img src="images/haiphong.jpg" alt="Bất Động Sản Hải Phòng" class="img-fluid rounded mb-3">
+                                    <h3 class="news-title">Bất Động Sản Hải Phòng: Điểm Sáng Của Thị Trường Phía Bắc Trong Năm 2025</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="news-list">
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Thị Trường Đất Nền Hải Phòng Tăng Trưởng Cả Về Giá Bán Và Giao Dịch</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Thị Trường Bất Động Sản Tháng 4/2025: Cuộc Giảm Tốc Trên Diện Rộng</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Conic Boulevard Hưởng Lợi Từ Mạng Lưới Hạ Tầng Mới Khu Tây TPHCM</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Bất Động Sản Hải Phòng: Điểm Sáng Của Thị Trường Phía Bắc Trong Năm 2025</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="news-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="main-news">
+                                    <img src="images/news.jpg" alt="Tin tức bất động sản" class="img-fluid rounded mb-3">
+                                    <h3 class="news-title">Cập Nhật Lãi Suất Vay Mua Nhà Ngân Hàng Vietcombank Tháng 05/2025</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="news-list">
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Lãi Suất Vay Mua Nhà Ngân Hàng ACB Tháng 05/2025</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Lãi Suất Vay Mua Nhà Ngân Hàng BIDV Tháng 05/2025</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Lãi Suất Vay Mua Nhà Ngân Hàng Techcombank Tháng 05/2025</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Lãi Suất Vay Mua Nhà Ngân Hàng VPBank Tháng 05/2025</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="hcm-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="main-news">
+                                    <img src="images/hcm.jpg" alt="BĐS TPHCM" class="img-fluid rounded mb-3">
+                                    <h3 class="news-title">Conic Boulevard Hưởng Lợi Từ Mạng Lưới Hạ Tầng Mới Khu Tây TPHCM</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="news-list">
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Thị Trường Bất Động Sản TPHCM Quý 1/2025: Dấu Hiệu Phục Hồi</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Giá Nhà Phố TPHCM Tăng 15% So Với Cùng Kỳ Năm Ngoái</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Khu Đông TPHCM: Điểm Nóng Của Thị Trường Bất Động Sản 2025</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Thị Trường Căn Hộ TPHCM: Nguồn Cung Mới Tăng 20% Trong Quý 2/2025</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="hanoi-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="main-news">
+                                    <img src="images/hanoi.jpg" alt="BĐS Hà Nội" class="img-fluid rounded mb-3">
+                                    <h3 class="news-title">Thị Trường Bất Động Sản Hà Nội: Khu Vực Nào Đang Là Tâm Điểm?</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="news-list">
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Giá Căn Hộ Tại Hà Nội Tăng 10% So Với Đầu Năm</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Khu Vực Tây Hồ Tây: Điểm Nóng Của Thị Trường BĐS Hà Nội</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex mb-3 pb-3 border-bottom">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Thị Trường Nhà Phố Hà Nội: Cung Giảm, Cầu Tăng</h5>
+                                        </div>
+                                    </div>
+                                    <div class="news-item d-flex">
+                                        <div class="news-content">
+                                            <h5 class="news-title mb-0">Các Dự Án Mới Tại Hà Nội Trong Quý 2/2025</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Property Listings Section -->
+        <section class="property-section py-4">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="section-title">Nhà đất bán mới nhất</h2>
+                    <a href="#" class="text-danger text-decoration-none">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/property1.jpg" class="card-img-top" alt="Nhà đất bán">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nổi bật</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bán nhà mặt phố Trần Duy Hưng</h5>
+                                <p class="card-text text-danger fw-bold">25 tỷ</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Cầu Giấy, Hà Nội</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 120 m²</span>
+                                    <span><i class="fas fa-bed me-1"></i> 4 PN</span>
+                                    <span><i class="fas fa-toilet me-1"></i> 3 WC</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng hôm nay</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/property2.jpg" class="card-img-top" alt="Nhà đất bán">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Mới</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Căn hộ 2PN Vinhomes Ocean Park</h5>
+                                <p class="card-text text-danger fw-bold">2.5 tỷ</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Gia Lâm, Hà Nội</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 65 m²</span>
+                                    <span><i class="fas fa-bed me-1"></i> 2 PN</span>
+                                    <span><i class="fas fa-toilet me-1"></i> 2 WC</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng hôm qua</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/property3.jpg" class="card-img-top" alt="Nhà đất bán">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Biệt thự Vinhomes Riverside</h5>
+                                <p class="card-text text-danger fw-bold">45 tỷ</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Long Biên, Hà Nội</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 300 m²</span>
+                                    <span><i class="fas fa-bed me-1"></i> 5 PN</span>
+                                    <span><i class="fas fa-toilet me-1"></i> 5 WC</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng 2 ngày trước</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/property4.jpg" class="card-img-top" alt="Nhà đất bán">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Đất nền dự án Ecopark</h5>
+                                <p class="card-text text-danger fw-bold">3.2 tỷ</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Văn Giang, Hưng Yên</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 100 m²</span>
+                                    <span><i class="fas fa-expand me-1"></i> 5x20m</span>
+                                    <span><i class="fas fa-road me-1"></i> 10m</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng 3 ngày trước</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Listings Section -->
+        <section class="rental-section py-4 bg-light">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="section-title">Nhà đất cho thuê mới nhất</h2>
+                    <a href="#" class="text-danger text-decoration-none">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/rental1.jpg" class="card-img-top" alt="Nhà đất cho thuê">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nổi bật</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cho thuê căn hộ 3PN Vinhomes Central Park</h5>
+                                <p class="card-text text-danger fw-bold">25 triệu/tháng</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Bình Thạnh, TP.HCM</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 90 m²</span>
+                                    <span><i class="fas fa-bed me-1"></i> 3 PN</span>
+                                    <span><i class="fas fa-toilet me-1"></i> 2 WC</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng hôm nay</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/rental2.jpg" class="card-img-top" alt="Nhà đất cho thuê">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Mới</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cho thuê văn phòng quận 1</h5>
+                                <p class="card-text text-danger fw-bold">35 triệu/tháng</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Quận 1, TP.HCM</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 80 m²</span>
+                                    <span><i class="fas fa-building me-1"></i> Tầng 15</span>
+                                    <span><i class="fas fa-door-open me-1"></i> 3 phòng</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng hôm qua</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/rental3.jpg" class="card-img-top" alt="Nhà đất cho thuê">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cho thuê nhà nguyên căn quận 7</h5>
+                                <p class="card-text text-danger fw-bold">15 triệu/tháng</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Quận 7, TP.HCM</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 70 m²</span>
+                                    <span><i class="fas fa-bed me-1"></i> 3 PN</span>
+                                    <span><i class="fas fa-toilet me-1"></i> 2 WC</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng 2 ngày trước</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="property-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/rental4.jpg" class="card-img-top" alt="Nhà đất cho thuê">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cho thuê phòng trọ quận Tân Bình</h5>
+                                <p class="card-text text-danger fw-bold">3.5 triệu/tháng</p>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Tân Bình, TP.HCM</p>
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-vector-square me-1"></i> 25 m²</span>
+                                    <span><i class="fas fa-toilet me-1"></i> WC riêng</span>
+                                    <span><i class="fas fa-motorcycle me-1"></i> Để xe</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Đăng 3 ngày trước</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section py-4">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="section-title">Dự án nổi bật</h2>
+                    <a href="#" class="text-danger text-decoration-none">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="project-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/project1.jpg" class="card-img-top" alt="Dự án">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nổi bật</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Vinhomes Ocean Park</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Gia Lâm, Hà Nội</p>
+                                <p class="card-text"><i class="fas fa-building me-2"></i>Khu đô thị</p>
+                                <p class="card-text"><i class="fas fa-vector-square me-2"></i>420 ha</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Chủ đầu tư: Vingroup</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="project-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/project2.jpg" class="card-img-top" alt="Dự án">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Mới</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">The Metropole Thủ Thiêm</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Thủ Thiêm, TP.HCM</p>
+                                <p class="card-text"><i class="fas fa-building me-2"></i>Khu phức hợp</p>
+                                <p class="card-text"><i class="fas fa-vector-square me-2"></i>7.6 ha</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Chủ đầu tư: SonKim Land</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="project-card card h-100">
+                            <div class="position-relative">
+                                <img src="images/project3.jpg" class="card-img-top" alt="Dự án">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ecopark Grand</h5>
+                                <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>Văn Giang, Hưng Yên</p>
+                                <p class="card-text"><i class="fas fa-building me-2"></i>Khu đô thị sinh thái</p>
+                                <p class="card-text"><i class="fas fa-vector-square me-2"></i>500 ha</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">Chủ đầu tư: Ecopark</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-light pt-5">
+    <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-4">
-                    <img src="images/logo_gray.svg" alt="Batdongsan.com.vn" height="40" class="mb-3">
+                    <img src="images/logo-white.png" alt="Batdongsan.com.vn" height="40" class="mb-3">
                     <p>Đơn vị vận hành: Công ty Cổ phần PropertyGuru Việt Nam</p>
                     <p>Địa chỉ: Tầng 31, Keangnam Hanoi Landmark, Phạm Hùng, Nam Từ Liêm, Hà Nội</p>
                     <p>Hotline: 1900 1881</p>
@@ -363,32 +764,32 @@
                 <div class="col-lg-3 mb-4">
                     <h5 class="mb-3">Hướng dẫn</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Báo giá & hỗ trợ</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Câu hỏi thường gặp</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Thông tin thanh toán</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Liên hệ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Báo giá & hỗ trợ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Câu hỏi thường gặp</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Thông tin thanh toán</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <h5 class="mb-3">Quy định</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Điều khoản thỏa thuận</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Quy chế hoạt động</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Chính sách bảo mật</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-dark">Giải quyết khiếu nại</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Điều khoản thỏa thuận</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Quy chế hoạt động</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Giải quyết khiếu nại</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4">
                     <h5 class="mb-3">Kết nối với chúng tôi</h5>
                     <div class="social-links mb-3">
-                        <a href="#" class="me-2 text-dark"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="me-2 text-dark"><i class="fab fa-youtube fa-lg"></i></a>
-                        <a href="#" class="me-2 text-dark"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                        <a href="#" class="text-dark"><i class="fab fa-tiktok fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
                     </div>
                     <h5 class="mb-3">Tải ứng dụng</h5>
                     <div class="app-links">
-                        <a href="#" class="me-2"><img src="images/app_store.png" alt="App Store" height="40"></a>
+                        <a href="#" class="me-2"><img src="images/app-store.png" alt="App Store" height="40"></a>
                         <a href="#"><img src="images/google-play.png" alt="Google Play" height="40"></a>
                     </div>
                 </div>
